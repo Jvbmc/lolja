@@ -55,6 +55,9 @@ main{
     background-color: aliceblue;
     height: 500px;
     width: 200px;;
+    border-radius: 10px;
+    margin: 30px;
+    margin-top: 90px;
 }
 
 footer{
