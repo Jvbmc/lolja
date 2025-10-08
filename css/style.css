@@ -1,136 +1,261 @@
-*{
-    font-family: "Alan Sans";
+* {
+  font-family: "Alan Sans";
 }
-body{
-    display: flex;
-    margin: 0;
-}
-
-
-header{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    height: 50px;
-    width: 100vw;
-    background-color: rgb(114, 6, 6);
-    left: 0;
-    z-index: 100;
+body {
+  display: flex;
+  margin: 0;
 }
 
-
-.logo{
-    margin-left: 10px;
-    align-content: center;
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: rgb(114, 6, 6);
+  left: 0;
+  z-index: 100;
 }
 
-.logo>img{
-    height: 45px;
+.logo {
+  margin-left: 10px;
+  align-content: center;
 }
 
-.info{
-    display: flex;
-    color: aliceblue;
-    margin-right: 10px;
-    font-size: 18px;
+.logo > img {
+  height: 45px;
 }
 
-.info>div{
-    margin-right: 10px;
-    align-content: center;
+.info {
+  display: flex;
+  color: aliceblue;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
-aside{
-    background-color: rgb(13, 60, 102);
-    flex: 1;
-    
+.info > div {
+  margin-right: 10px;
+  align-content: center;
 }
 
-.lado{
-    padding: 50px;
-    background-color: aliceblue;
-    opacity: 0.9;
-    height: 100vh;
-    width: 100;
-    border-radius: 20px;
-    margin: 10px;
-    margin-top: 70px;
+aside {
+  background-color: rgb(13, 60, 102);
+  flex: 1;
 }
 
-
-a{
-    text-decoration: none;
-    font-size: 20px;
+.lado {
+  padding: 50px;
+  background-color: aliceblue;
+  opacity: 0.9;
+  height: 100vh;
+  width: 100;
+  border-radius: 20px;
+  margin: 10px;
+  margin-top: 70px;
 }
 
-main{
-    gap: 85px;
-    justify-content:space-around;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(13, 60, 102);
-    
-    flex:4;
+a {
+  color: rgb(13, 60, 102);
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.lado2{
-    
-    opacity: 0.9;
-    text-align: center;
-    background-color: aliceblue;
-    height: 500px;
-    width: 270px;;
-    border-radius: 10px;
-    margin: 30px;
-    margin-top: 90px;
-    box-shadow: 5px 5px 50px black;
+a:visited {
+  color: rgb(13, 60, 102);
 }
 
-footer{
-    position: fixed;
-    bottom: 0;
-    height: 30px;
-    width: 100vw;
-    background-color: rgb(0, 0, 0);
-    left: 0;
+main {
+  gap: 85px;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(13, 60, 102);
+
+  flex: 4;
 }
 
-.lado2>img{
-    margin-top: 40px;
-    height:200px;
+.lado2 {
+  opacity: 0.9;
+  text-align: center;
+  background-color: aliceblue;
+  height: 500px;
+  width: 270px;
+  border-radius: 10px;
+  margin: 30px;
+  margin-top: 90px;
+  box-shadow: 5px 5px 50px black;
 }
 
-.lado2>p{
-    
-    text-align: center;
-    
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  left: 0;
 }
 
-.nome{
-    font-size: 30px;
-    
+.lado2 > img {
+  margin-top: 40px;
+  height: 200px;
+  transition: 0.2s;
 }
 
-.desc{
-    font-size: 20px;
-    color:rgb(95, 5, 5);
+.lado2 > img:hover {
+  margin-top: 40px;
+  height: 200px;
+  transform: scale(1.2, 1.2);
+}
+.lado2 > p {
+  text-align: center;
+}
+
+.nome {
+  font-size: 30px;
+}
+
+.desc {
+  font-size: 20px;
+  color: rgb(95, 5, 5);
 }
 .preco {
-    font-size: 18px;
-    color: black;
-    border: solid 2px rgb(253, 228, 6);
-    border-radius: 12px;
-    min-height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    width: 100px;
-    transition: 0.2s;
-    box-shadow: 0.5px 0.5px 15px rgb(61, 61, 61);
+  font-size: 18px;
+  color: black;
+  border: solid 2px rgb(253, 228, 6);
+  border-radius: 12px;
+  min-height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  width: 100px;
+  transition: 0.2s;
+  box-shadow: 0.5px 0.5px 15px rgb(61, 61, 61);
 }
 
-.preco:hover{
-    color:aliceblue;
-    transform: scale(1.5, 1.5);
-    background-color:rgb(253, 228, 6); ;
+.preco:hover {
+  color: aliceblue;
+  transform: scale(1.5, 1.5);
+  background-color: rgb(253, 228, 6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column; /* Empilha aside e main verticalmente */
+  }
+
+  header {
+    height: 40px; /* Reduz altura do header */
+  }
+
+  .logo > img {
+    height: 35px; /* Reduz tamanho da logo */
+  }
+
+  .info {
+    font-size: 1rem; /* Reduz tamanho da fonte */
+  }
+
+  aside {
+    flex: none; /* Remove flex-grow para aside */
+    height: auto; /* Altura automática para evitar ocupar toda a tela */
+  }
+
+  .lado {
+    margin-top: 50px; /* Ajusta margem para caber abaixo do header */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  main {
+    gap: 1.5rem;
+    flex: none; /* Remove flex-grow para main */
+  }
+
+  .lado2 {
+    width: 80%; /* Usa porcentagem para largura */
+    max-width: 300px; /* Limita largura máxima */
+    height: auto; /* Altura automática */
+    margin: 1rem auto; /* Centraliza */
+  }
+
+  .lado2 > img {
+    height: 150px; /* Reduz tamanho da imagem */
+  }
+
+  .nome {
+    font-size: 1.5rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .preco {
+    font-size: 1rem;
+    width: 80px;
+    min-height: 35px;
+    line-height: 35px;
+  }
+}
+
+/* Media Query para celulares (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    height: 35px; /* Reduz ainda mais o header */
+  }
+
+  .logo > img {
+    height: 30px;
+  }
+
+  .info {
+    font-size: 0.875rem; /* 14px */
+    margin-right: 5px;
+  }
+
+  .info > div {
+    margin-right: 5px;
+  }
+
+  .lado {
+    padding: 0.5rem;
+    margin: 5px;
+    margin-top: 40px;
+  }
+
+  .lado2 {
+    width: 90%; /* Usa quase toda a largura da tela */
+    margin: 0.5rem auto;
+  }
+
+  .lado2 > img {
+    height: 120px; /* Imagem ainda menor */
+  }
+
+  .nome {
+    font-size: 1.25rem;
+  }
+
+  .desc {
+    font-size: 0.875rem;
+  }
+
+  .preco {
+    font-size: 0.875rem;
+    width: 70px;
+    min-height: 30px;
+    line-height: 30px;
+  }
+
+  .lado2 > img:hover {
+    transform: none; /* Remove hover em celulares */
+  }
+
+  .preco:hover {
+    transform: none; /* Remove hover em celulares */
+  }
 }
